@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -21,46 +21,93 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-I2-NOO">
-                    <rect key="frame" x="12" y="59" width="390" height="240"/>
+                    <rect key="frame" x="56" y="15" width="240" height="327"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="240" id="Kah-VN-RvV"/>
+                        <constraint firstAttribute="width" constant="240" id="VLI-QT-HNb"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VLI-QT-HNb"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="Kah-VN-RvV"/>
+                            <include reference="VLI-QT-HNb"/>
+                        </mask>
+                    </variation>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-jR-sfh">
-                    <rect key="frame" x="12" y="307" width="390" height="543"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-jR-sfh">
+                    <rect key="frame" x="308" y="12" width="448" height="330"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSA-wy-0OS" userLabel="name">
-                            <rect key="frame" x="169.5" y="0.0" width="51" height="99"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSA-wy-0OS" userLabel="name">
+                            <rect key="frame" x="208.33333333333337" y="0.0" width="31.666666666666657" height="66"/>
+                            <attributedString key="attributedText">
+                                <fragment content="text">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="21"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="21"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-cV-pHt" userLabel="author">
-                            <rect key="frame" x="165.5" y="111" width="59" height="99"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVI-cV-pHt" userLabel="author">
+                            <rect key="frame" x="208.33333333333337" y="66" width="31.666666666666657" height="66"/>
+                            <attributedString key="attributedText">
+                                <fragment content="text">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="21"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="21"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt3-1N-2BM" userLabel="rating">
-                            <rect key="frame" x="169" y="222" width="52.5" height="99"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qt3-1N-2BM" userLabel="rating">
+                            <rect key="frame" x="208.33333333333337" y="132" width="31.666666666666657" height="66"/>
+                            <attributedString key="attributedText">
+                                <fragment content="text">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="21"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="21"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h31-WZ-wRc" userLabel="price">
-                            <rect key="frame" x="172.5" y="333" width="45.5" height="99"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h31-WZ-wRc" userLabel="price">
+                            <rect key="frame" x="208.33333333333337" y="198" width="31.666666666666657" height="66"/>
+                            <attributedString key="attributedText">
+                                <fragment content="text">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="21"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="21"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-O3-G4N" userLabel="id">
-                            <rect key="frame" x="186.5" y="444" width="17" height="99"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-O3-G4N" userLabel="id">
+                            <rect key="frame" x="208.33333333333337" y="264" width="31.666666666666657" height="66"/>
+                            <attributedString key="attributedText">
+                                <fragment content="text">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="system" size="21"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="21"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -71,12 +118,32 @@
                 <constraint firstItem="ixP-I2-NOO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="BrJ-8y-x5j"/>
                 <constraint firstItem="fYD-jR-sfh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="GGr-vS-vwv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ixP-I2-NOO" secondAttribute="trailing" constant="12" id="V16-bo-wdQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ixP-I2-NOO" secondAttribute="bottom" constant="12" id="XCh-bt-hWV"/>
+                <constraint firstItem="fYD-jR-sfh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="Xzc-Rm-hDO"/>
                 <constraint firstItem="fYD-jR-sfh" firstAttribute="top" secondItem="ixP-I2-NOO" secondAttribute="bottom" constant="8" id="kZS-Ek-qRi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fYD-jR-sfh" secondAttribute="trailing" constant="12" id="mz9-Cz-vbb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fYD-jR-sfh" secondAttribute="bottom" constant="12" id="pHm-4M-ult"/>
+                <constraint firstItem="fYD-jR-sfh" firstAttribute="leading" secondItem="ixP-I2-NOO" secondAttribute="trailing" constant="12" id="s41-Eg-XJl"/>
                 <constraint firstItem="ixP-I2-NOO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="uTb-IS-acq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XCh-bt-hWV"/>
+                    <exclude reference="Xzc-Rm-hDO"/>
+                    <exclude reference="s41-Eg-XJl"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <exclude reference="V16-bo-wdQ"/>
+                    <include reference="XCh-bt-hWV"/>
+                    <exclude reference="GGr-vS-vwv"/>
+                    <include reference="Xzc-Rm-hDO"/>
+                    <exclude reference="kZS-Ek-qRi"/>
+                    <include reference="s41-Eg-XJl"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
